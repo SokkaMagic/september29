@@ -31,5 +31,5 @@ class ShoppingCart:
     def show_items(self):
         for i in range(len(ShoppingCart.lst_name)-1):
             ShoppingCart.result += f"{ShoppingCart.lst_name[i]}: ${ShoppingCart.lst_price[i]}\n"
-        ShoppingCart.result += f"{ShoppingCart.lst_name[i]}: ${ShoppingCart.lst_price[i]}"
+        ShoppingCart.result += f"{ShoppingCart.lst_name[len(ShoppingCart.lst_price)-1]}: ${ShoppingCart.lst_price[len(ShoppingCart.lst_price)-1]}"
         return ShoppingCart.result
