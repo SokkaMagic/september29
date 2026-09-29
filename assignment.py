@@ -20,6 +20,7 @@ class Book:
 class ShoppingCart:
     lst_price=[]
     lst_name=[]
+    result=''
     def __init__(self):
         pass
     def add_item(self,name,price):
@@ -28,4 +29,6 @@ class ShoppingCart:
     def total_price(self):
         return sum(ShoppingCart.lst_price)
     def show_items(self):
-        return ShoppingCart.lst_name
+        for i in range(len(ShoppingCart.lst_name)):
+            ShoppingCart.result += f"\n{ShoppingCart.lst_name[i]}: ${ShoppingCart.lst_price[i]}"
+        return ShoppingCart.result
