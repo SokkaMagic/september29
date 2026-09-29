@@ -18,11 +18,10 @@ class Book:
 
 # Exercise 3
 class ShoppingCart:
-    lst_price=[]
-    lst_name=[]
-    result=''
     def __init__(self):
-        pass
+        self.lst_price=[]
+        self.lst_name=[]
+        self.result=""
     def add_item(self,name,price):
         self.lst_name.append(name)
         self.lst_price.append(price)
