@@ -29,6 +29,7 @@ class ShoppingCart:
     def total_price(self):
         return sum(ShoppingCart.lst_price)
     def show_items(self):
-        for i in range(len(ShoppingCart.lst_name)):
-            ShoppingCart.result += f"\n{ShoppingCart.lst_name[i]}: ${ShoppingCart.lst_price[i]}"
+        for i in range(len(ShoppingCart.lst_name)-1):
+            ShoppingCart.result += f"{ShoppingCart.lst_name[i]}: ${ShoppingCart.lst_price[i]}\n"
+        ShoppingCart.result += f"{ShoppingCart.lst_name[i]}: ${ShoppingCart.lst_price[i]}"
         return ShoppingCart.result
