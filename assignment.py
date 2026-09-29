@@ -24,12 +24,12 @@ class ShoppingCart:
     def __init__(self):
         pass
     def add_item(self,name,price):
-        ShoppingCart.lst_name.append(name)
-        ShoppingCart.lst_price.append(price)
+        self.lst_name.append(name)
+        self.lst_price.append(price)
     def total_price(self):
-        return sum(ShoppingCart.lst_price)
+        return sum(self.lst_price)
     def show_items(self):
-        for i in range(len(ShoppingCart.lst_name)-1):
-            ShoppingCart.result += f"{ShoppingCart.lst_name[i]}: ${ShoppingCart.lst_price[i]}\n"
-        ShoppingCart.result += f"{ShoppingCart.lst_name[len(ShoppingCart.lst_price)-1]}: ${ShoppingCart.lst_price[len(ShoppingCart.lst_price)-1]}"
-        return ShoppingCart.result
+        for i in range(len(self.lst_name)-1):
+            self.result += f"{self.lst_name[i]}: ${self.lst_price[i]}\n"
+        self.result += f"{self.lst_name[len(self.lst_price)-1]}: ${self.lst_price[len(self.lst_price)-1]}"
+        return self.result
