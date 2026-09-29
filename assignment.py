@@ -20,12 +20,11 @@ class Book:
 class ShoppingCart:
     lst_price=[]
     lst_name=[]
-    def __init__(self,name,price):
-        self.name = name
-        self.price = price
+    def __init__(self):
+        pass
     def add_item(self,name,price):
-        ShoppingCart.lst_name.append(self.name)
-        ShoppingCart.lst_price.append(self.price)
+        ShoppingCart.lst_name.append(name)
+        ShoppingCart.lst_price.append(price)
     def total_price(self):
         return sum(ShoppingCart.lst_price)
     def show_items(self):
